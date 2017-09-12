@@ -50,11 +50,11 @@ open class BaseDestination: Hashable, Equatable {
     open var levelColor = LevelColor()
 
     public struct LevelString {
-        public var verbose = "VERBOSE"
-        public var debug = "DEBUG"
-        public var info = "INFO"
-        public var warning = "WARNING"
-        public var error = "ERROR"
+        public var verbose = ""
+        public var debug = ""
+        public var info = ""
+        public var warning = ""
+        public var error = ""
     }
 
     // For a colored log level word in a logged line
@@ -122,7 +122,7 @@ open class BaseDestination: Hashable, Equatable {
 
                 switch firstChar {
                 case "L":
-                    text += levelWord(level) + remainingPhrase
+                    text += /*levelWord(level) + */ remainingPhrase
                 case "M":
                     text += msg + remainingPhrase
                 case "T":
